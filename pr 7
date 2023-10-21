@@ -1,0 +1,26 @@
+import random
+
+point = 0
+day = ('Сьгодні в тебе прекрасний день')
+eat = ('зиїж чіпси','зиїж морозиво ','зиїж печення','поїж щось смачне')
+film = ('подивись фільм','подивися мультфільм ')
+user = {'stas': '1010'}
+print('Увійдіть в акаунт')
+print('Ведіть логін')
+log = input()
+print('Ведіть пароль')
+passw = input()
+if passw == user[log] :
+  for i in range(0,1):
+    eat1 = eat[random.randint(1,3)]
+    film1 = film[random.randint(0,1)]
+    print(day ,eat1,film1,)
+
+elif passw != user[log] or log != user[passw]:
+  print("Ви вели неправильний пароль")
+  print("Спробуйте увійти ще раз ")
+  while passw != user[log]:
+    print('Ведіть логін')
+    log = input()
+    print('Ведіть пароль')
+    passw = input()
